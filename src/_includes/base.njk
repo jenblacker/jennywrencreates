@@ -43,8 +43,8 @@
     <div class="box">{{ content | safe }}</div>
 
     <div class="box footer footer-box">
-      <div class="footer-social">
-        {% if social %}
+      {% if social %}
+        <div class="footer-social">
           <p class="sr-only">Find me on social media:</p>
           <ul>
             {% for network in social -%}
@@ -55,8 +55,8 @@
               </li>
             {% endfor %}
           </ul>
-        {% endif %}
-      </div>
+        </div>
+      {% endif %}
       <p class="footer-text">© 2026 Jenny Wren Creates</p>
       <p class="footer-text">Built with <a href="https://www.11ty.dev/" class="link" target="_blank">11ty</a>, theme <a href="https://github.com/CLCK0622/11ty-Serene" class="link" target="_blank">11ty-Serene</a>. Powered by <a href="https://www.netlify.com/" class="link" target="_blank">Netlify</a>.</p>
     </div>
