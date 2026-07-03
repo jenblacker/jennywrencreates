@@ -5,6 +5,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/styles.css");
     eleventyConfig.addPassthroughCopy("src/main.js");
+    eleventyConfig.addPassthroughCopy("src/img");
 
     eleventyConfig.addPlugin(pluginRss);
 
@@ -42,6 +43,7 @@ module.exports = function (eleventyConfig) {
         dir: {
             input: "src",
             includes: "_includes",
+            data: "_data",
             output: "_site"
         },
         markdownTemplateEngine: "njk",
