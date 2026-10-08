@@ -103,6 +103,10 @@ $border-radius: 0.5rem;
   gap: 15px;
   flex: initial;
   margin-right: 15px;
+
+  &:before {
+    content: '\A';
+  }
 }
 
 .nav-link {
@@ -288,6 +292,7 @@ table {
   align-items: center;
   gap: 5px;
   flex: initial;
+  margin-left: 15px;
 }
 
 .material-symbols-outlined {

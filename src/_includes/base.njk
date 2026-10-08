@@ -17,12 +17,7 @@
 
   <div class="box nav-box">
     <nav class="nav-bar">
-      <div class="nav-title"><img src="img/banner.png" alt="Jenny Wren Creates" class="nav-logo" /></div>
-      {# <div class="nav-links">
-        {% for page in collections.pages %}
-          <a href="{{ page.url }}" class="nav-link">{{ page.data.title }}</a>
-        {% endfor %}
-      </div> #}
+      <div class="nav-title"><a href="/"><img src="/img/banner.png" alt="Jenny Wren Creates" class="nav-logo" /></a></div>
       <span class="dark-toggle">
         <span class="material-symbols-outlined">light_mode</span>
         <label class="switch">
@@ -36,6 +31,13 @@
         </label>
         <span class="material-symbols-outlined">dark_mode</span>
       </span>
+      <div class="nav-links">
+        {% for page in collections.pages %}
+          {% if page.data.title != "Intro" %}
+          <a href="{{ page.url }}" class="nav-link">{{ page.data.title }}</a>
+        {% endif %}
+        {% endfor %}
+      </div>
     </nav>
   </div>
 
